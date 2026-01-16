@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GitObSketch</title>
+<style>
+html,body{margin:0;padding:0;background:#0a0e27;color:#e8ffff;font-family:Arial,Helvetica,sans-serif;scroll-behavior:smooth}
+body{overflow-x:hidden}
+.glow{text-shadow:0 0 10px #00fff2,0 0 20px #00fff2}
+header{text-align:center;padding:80px 20px;position:relative}
+h1{font-size:64px;letter-spacing:4px;animation:glitch 3s infinite}
+@keyframes glitch{
+  0%,100%{text-shadow:2px 2px #ff006e,-2px -2px #00fff2}
+  50%{text-shadow:-2px 2px #b026ff,2px -2px #00fff2}
+}
+.subtitle{font-size:20px;color:#b026ff}
+.forest{position:fixed;inset:0;z-index:-1;background:linear-gradient(#0a0e27,#020412)}
+.tree{position:absolute;bottom:0;width:60px;height:300px;background:#1a4d2e;border-radius:30px;filter:drop-shadow(0 0 12px #52b788);animation:sway 3s ease-in-out infinite alternate}
+@keyframes sway{from{transform:rotate(-1deg)}to{transform:rotate(1deg)}}
+.eye{position:absolute;width:10px;height:10px;background:#ff006e;border-radius:50%;box-shadow:0 0 10px #ff006e;animation:blink 6s infinite}
+@keyframes blink{0%,95%,100%{transform:scaleY(1)}97%{transform:scaleY(0.1)}}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:24px;padding:40px;max-width:1200px;margin:auto}
+.card{background:rgba(10,14,39,0.6);backdrop-filter:blur(6px);border:1px solid #00fff2;border-radius:16px;padding:24px;text-align:center;transition:.3s;cursor:pointer}
+.card:hover{transform:translateY(-10px);border-color:#b026ff;box-shadow:0 0 25px #b026ff}
+.card .ka{font-size:22px;margin-top:10px}
+.card .en{font-size:14px;color:#b026ff}
+.scroll{color:#00fff2;text-align:center;animation:bounce 2s infinite}
+@keyframes bounce{0%,100%{transform:translateY(0)}50%{transform:translateY(10px)}}
+</style>
+</head>
+<body>
+<div class="forest">
+  <div class="tree" style="left:5%"></div>
+  <div class="tree" style="left:20%;height:260px"></div>
+  <div class="tree" style="left:40%;height:320px"></div>
+  <div class="tree" style="left:60%;height:280px"></div>
+  <div class="tree" style="left:80%;height:300px"></div>
+  <div class="eye" style="left:25%;bottom:120px"></div>
+  <div class="eye" style="left:26%;bottom:120px"></div>
+  <div class="eye" style="left:55%;bottom:140px"></div>
+  <div class="eye" style="left:56%;bottom:140px"></div>
+</div>
+<header>
+  <h1 class="glow">GITOBSKETCH</h1>
+  <div class="subtitle">თამაშების მისტიური პორტალი</div>
+</header>
+<div class="scroll">⬇</div>
+<section class="grid">
+  <a class="card" href="categories/adventure.html"><div>🏃</div><div class="ka">სათავგადასავლო</div><div class="en">Adventure</div></a>
+  <a class="card" href="categories/sport.html"><div>⚽</div><div class="ka">სპორტი</div><div class="en">Sport</div></a>
+  <a class="card" href="categories/puzzle.html"><div>🧩</div><div class="ka">თავსატეხი</div><div class="en">Puzzle</div></a>
+  <a class="card" href="categories/action.html"><div>🎯</div><div class="ka">მოქმედება</div><div class="en">Action</div></a>
+  <a class="card" href="categories/racing.html"><div>🏎️</div><div class="ka">რბოლა</div><div class="en">Racing</div></a>
+  <a class="card" href="categories/strategy.html"><div>🎭</div><div class="ka">სტრატეგია</div><div class="en">Strategy</div></a>
+  <a class="card" href="categories/horror.html"><div>👻</div><div class="ka">საშინელებები</div><div class="en">Horror</div></a>
+  <a class="card" href="categories/casual.html"><div>🎨</div><div class="ka">დასასვენებელი</div><div class="en">Casual</div></a>
+</section>
+</body>
+</html>
